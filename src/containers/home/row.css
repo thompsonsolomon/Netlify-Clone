@@ -1,0 +1,351 @@
+* {
+    margin: 0%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.Row-title{
+    color: inherit!important;
+}
+.Row-posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 10px;
+}
+
+.Row-posters::-webkit-scrollbar {
+    display: none;
+}
+
+.Row {
+    margin-left: 5px;
+    margin-top:20px;
+   
+}
+.loading{
+    font-size: 20px;
+    box-shadow: 1px 2px 3px 4px solid red;
+}
+
+.Row-poster {
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    margin-left: 10px;
+    transition: transform 450ms;
+}
+
+.Row-poster:hover {
+    transform: scale(1.08);
+
+}
+
+.Row-posterLarge {
+    max-height: 200px;
+}
+
+.Row-posterLarge:hover {
+    transform: scale(1.09);
+
+}
+
+/* banner styles  */
+
+.banner {
+    color: white;
+    object-fit: contain;
+    height: 448px;
+}
+
+.bannerCon {
+    margin-left: 30px;
+    padding-top: 148px;
+    height: 200px;
+}
+
+.BannerTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.2rem;
+
+}
+
+.bannerDiscription {
+    width: 100%;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 20px;
+    max-width: 400px;
+    height: 60px;
+}
+
+.bannerButton {
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding-bottom: 0.5rem;
+    box-shadow: 1px 3px 7px 4px rgba(55, 55, 55, 0.8);
+}
+
+.bannerButton:hover {
+    color: #000;
+    background-color: #e6e6e6;
+    transition: all 1s;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.light-mode {
+    background-color: white;
+    color: black !important;
+}
+
+.checkbox {
+    margin-top: 10px;
+    -webkit-appearance: none;
+    position: relative;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.checkbox::after {
+    content: '';
+    width: 40px;
+    height: 20px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 18px;
+    clear: both;
+}
+
+.checkbox::before {
+    content: '';
+    width: 20px;
+    height: 19px;
+    display: block;
+    position: absolute;
+    left: 0;
+    /* top: -1px; */
+    border-radius: 30px;
+    background-color:white;
+    box-shadow: 1px 1px 10px black;
+}
+
+.checkbox:checked::before {
+    left: 22px;
+    box-shadow: 1px 1px 10px black;
+    background-color: white;
+
+
+}
+
+.checkbox:checked::after {
+    background-color: black;
+}
+
+.checkbox,
+.checkbox::after,
+.checkbox::before,
+.checkbox:checked::before,
+.checkbox:checked::after {
+    transition: ease 1s;
+    -webkit-transition: ease 1s;
+    -moz-transition: ease 1s;
+    -o-transition: ease 1s;
+}
+
+
+
+.banner_fadeButton {
+    height: 7.4rem;
+    background-image: linear-gradient(180deg,
+            transparent,
+            rgba(37, 37, 37, 0.61),
+            #111);
+}
+
+/* nav style  */
+
+.Browsenavcon {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+    transition-timing-function: ease-in;
+    transition: all 1s;
+}
+
+.nav__black {
+    background-color: #111;
+
+}
+
+.nav-logo {
+    position: fixed;
+    left: 0;
+    width: 100px;
+    object-fit: contain;
+}
+
+.nav-bttn {
+    position: fixed;
+    right: 30px;
+    width: 100px;
+    object-fit: contain;
+}
+
+
+/* overlay styling */
+
+.overlay {
+    width: 100px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 50px;
+
+    /* display: none; */
+}
+
+.overlayConShow {
+    display: flex;
+}
+
+.overlay svg {
+    height: 40px;
+    width: 1200;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    animation: App-logo-spin infinite 20s linear;
+}
+
+
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.overlayCon {
+    position: fixed;
+    bottom: 0;
+    /* padding-left:-90px; */
+    background: transparent;
+    display: flex;
+    width: 95% !important;
+    justify-content: flex-end;
+}
+.overlaycontenlight {
+       background-color: white;
+}
+.overlaycontendark {
+    background-color: black;
+}
+
+/* overlayContent styling */
+
+.overlaycontent {
+    position: absolute;
+    height: fit-content;
+    padding: 20px;
+    bottom: 70px;
+    width: 30%;
+    right: 60px;
+    background-image: linear-gradient(180deg,
+            transparent,
+            rgba(37, 37, 37, 0.61),
+            #111);
+    text-align: start;
+    box-shadow: 1px 2px 3px 4px rgb(190, 176, 176);
+    line-height: 25px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    /* display: none; */
+}
+
+.overlaycontent a {
+    text-decoration: underline;
+}
+
+
+.overlaycontent h2 {
+    border-bottom: 1.5px solid #111;
+}
+
+@media (max-width:765px) {
+    .overlaycontent {
+        width: 65%;
+    }
+}
+
+@media (max-width:1000px) {
+    .overlaycontent {
+        width: 70%;
+    }
+}
+
+.LogOutButton {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 18px;
+    font-size: 15px;
+    color: white;
+    background-color: red;
+    margin-top: 20px;
+    cursor: pointer;
+    transition-timing-function: ease-in;
+    transition: all 1s;
+}
+
+.LogOutButton:hover {
+    background-color: white;
+    color: red;
+    box-shadow: 1px 2px 3px 4px red;
+}
+
+h2 {
+    color: #ffff;
+}
+
+.emoji {
+    color: red;
+}
+
+.las{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.modeCon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
