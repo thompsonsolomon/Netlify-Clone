@@ -15,7 +15,7 @@ export default function header() {
           <div className='OptFormContainer'>
             <div className="optforminput">
               <input type="text" className="optFormInput" placeholder='Email address' />
-              <button className="optFormButton">Try it now ></button>
+              <button className="optFormButton">Try it now {">"}</button>
             </div>
             <p className="optFormText">Ready to watch? Enter your email to creat or restart our membership </p>
           </div>

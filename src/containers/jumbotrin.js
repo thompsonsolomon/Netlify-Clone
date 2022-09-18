@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import '../components/styles/style.css'
-import jumboData from '../components/fixtures/jumbo.json'
+import { jumboData } from '../components/fixtures/jumbo'
 export default function Jumbotron() {
   return (
     <>
